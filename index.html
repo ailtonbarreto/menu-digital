@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <button id="btnAbrir" class="btn-menu">☰</button>
+
+        <h1>Cardápio Digital</h1>
+
+        <div class="cart-count" >
+            <span id="cartCount">0</span>
+            <span class="material-symbols-outlined" id="cart">shopping_bag</span>
+        </div>
+
+    </header>
+
+    <div id="cart_popup"></div>
+
+    <aside id="sidebar" class="sidebar">
+
+        <button id="btnFechar" class="btn-fechar">
+            <span class="btn-text">Opcões</span>
+            <span class="btn-x">✕</span>
+        </button>
+
+        <div id="menuCategorias" class="menu-categorias">
+
+        </div>
+
+    </aside>
+
+
+    <main class="content">
+        <div id="cards" class="cards"></div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
