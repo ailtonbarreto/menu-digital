@@ -427,12 +427,15 @@ header {
 }
 
 .card-img {
-    display: none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%;
 }
 
 .card-img img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
 }
 
@@ -585,7 +588,7 @@ header {
     }
 
     .card {
-        width: 30vw;
+        width: 20vw;
 
         .card-info {
             display: flex;
