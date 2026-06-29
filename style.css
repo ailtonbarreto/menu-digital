@@ -227,8 +227,8 @@ header {
     padding: 4vw 2vw;
     gap: 3vw;
     border-radius: 8px;
-    width: 90%;
-    width: 400px
+    width: 90vw;
+    height: 50vh;
 }
 
 
@@ -602,20 +602,24 @@ header {
     }
 
     #finish_container {
-        width: auto;
-        height: auto;
+        width: 50vw;
+        height: 40vh;
 
-        #clienteNome,
-        #rua,
-        #numero,
-        #complemento,
-        #bairro {
+        h3{
+            color: var(--color-bg-card);
+        }
+
+        select{
+            border: none;
+            outline: none;
+            padding: 1vw;
+        }
+    
+
+        #mesa {
             font-size: 1vw;
         }
 
-        .endereco_container {
-            gap: 1vw;
-        }
 
         #send_zap_btn,
         #cancel_zap_btn {
