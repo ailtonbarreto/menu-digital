@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             transformHeader: h =>
                 h.normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '')
-                .replace(/\s+/g, '')
-                .replace(/\r/g, '')
-                .toLowerCase(),
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/\s+/g, '')
+                    .replace(/\r/g, '')
+                    .toLowerCase(),
 
             complete: res => {
 
@@ -145,6 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'card';
 
             card.innerHTML = `
+
+                    <div class="title">
+                        <h3>${item.nome}</h3>
+                        <strong>R$ ${item.preco}</strong>
+                    </div>
+
                 ${item.imagem ? `
                     <div class="card-img">
                         <img src="${item.imagem}" alt="${item.nome}" loading="lazy">
@@ -153,15 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="card-info">
 
-                    <div class="title">
-                        <h3>${item.nome}</h3>
-                        <strong>R$ ${item.preco}</strong>
-                    </div>
+
 
                     <p>${item.descricao || ''}</p>
 
                     <div class="price">
-                        <button class="cta-btn">Add</button>
+                        <button class="cta-btn">Adicionar</button>
                     </div>
 
                 </div>
@@ -173,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     id: itemId,
                     nome: item.nome,
                     preco: item.preco,
-                    imagem: item.imagem || '',
+                    // imagem: item.imagem || '',
                     categoria
                 });
 
