@@ -259,9 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div id="finish_container">
 
-                <h3>
-                    Número da Mesa
-                </h3>
+                <h1>
+                    Finalizar Pedido
+                </h1>
 
                 <div>
 
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         id="send_zap_btn"
                         onclick="gerarPDF()"
                     >
-                        📄 Gerar Pedido
+                        Gerar Pedido
                     </button>
 
                     <button
@@ -404,7 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.setFont("helvetica", "bold");
             doc.setFontSize(11);
 
-            // doc.text(`${item.qtd}x ${item.nome}`, 10, y);
 
             doc.text(
                 `${item.qtd}x (${item.categoria.toUpperCase()}) ${item.nome}`,
