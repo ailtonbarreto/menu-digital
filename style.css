@@ -206,9 +206,10 @@ header {
     .finalizar-btn {
         background-color: var(--color-cta);
         border: none;
+        font-size: 4vw;
         border-radius: 1vw;
-        padding: 1.5vw;
-        width: 30%;
+        padding: 2vw;
+        width: 40%;
         color: var(--color-bg-card);
         font-weight: bold;
         cursor: pointer;
@@ -331,8 +332,8 @@ header {
     width: 100%;
     margin-bottom: 12px;
     background-color: var(--primary-color);
-    padding: 1vw;
-    font-size: medium;
+    padding: 2vw;
+    font-size: 5vw;
     color: var(--second-color);
     font-weight: bold;
     border: none;
@@ -357,12 +358,13 @@ header {
 
 .card {
     background: var(--color-bg-card);
-    padding: 10vw 5vw;
+    padding: 5vw;
     width: 90vw;
     margin: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.56);
 }
 
@@ -386,19 +388,10 @@ header {
 }
 
 .card-info {
-    margin-top: 10px;
     color: var(--second-color);
     font-weight: bold;
 
 }
-
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 .card-info p {
     margin: 10px 0 10px 0;
@@ -410,6 +403,14 @@ header {
     color: var(--second-color);
     font-weight: bold;
 }
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .price{
     align-items: center;
@@ -425,8 +426,8 @@ header {
     width: 90%;
     border-radius: 1vw;
     color: var(--color-bg-card);
-    font-size: 3.5vw;
-    padding: 2vw;
+    font-size: 5vw;
+    padding: 2.5vw;
     cursor: pointer;
 }
 
