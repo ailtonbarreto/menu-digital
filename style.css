@@ -168,6 +168,7 @@ header {
         border: none;
         border-radius: 1vw;
         padding: 1vw;
+        resize: none;
         width: 80%;
         outline: none;
     }
@@ -412,7 +413,7 @@ header {
 }
 
 
-.price{
+.price {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -439,6 +440,11 @@ header {
         display: wrap;
         align-items: center;
         padding-top: 70px;
+    }
+
+    .menu-categorias .category-btn {
+        padding: 0.5vw;
+        font-size: 1vw;
     }
 
     #cart_popup {
@@ -502,8 +508,9 @@ header {
 
         .finalizar-btn {
             border-radius: 0.5vw;
-            padding: 1vw;
-            width: 50%;
+            padding: 0.5vw;
+            font-size: 1vw;
+            width: 30%;
         }
 
         .material-symbols-outlined {
