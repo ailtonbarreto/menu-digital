@@ -343,43 +343,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const { jsPDF } = window.jspdf;
-
         const doc = new jsPDF();
 
         let y = 20;
+        let total = 0;
 
-        // Cabeçalho
+        /* ==========================
+           CABEÇALHO
+        ========================== */
+
         doc.setFont("helvetica", "bold");
         doc.setFontSize(20);
         doc.text("PEDIDO", 105, y, { align: "center" });
 
-        y += 15;
+        y += 12;
 
-        doc.setFontSize(11);
-        doc.setFont("helvetica", "normal");
-
-        doc.setFont("helvetica", "bold");
         doc.setFontSize(18);
         doc.text(mesa, 105, y, { align: "center" });
 
-        y += 12;
-        y += 7;
-
-        y += 12;
+        y += 15;
 
         doc.setDrawColor(180);
         doc.line(10, y, 200, y);
 
         y += 10;
 
+        /* ==========================
+           TÍTULO
+        ========================== */
+
         doc.setFont("helvetica", "bold");
+        doc.setFontSize(14);
         doc.text("Itens do Pedido", 10, y);
 
-        y += 8;
+        y += 10;
 
-        doc.setFont("helvetica", "normal");
-
-        let total = 0;
+        /* ==========================
+           ITENS
+        ========================== */
 
         carrinho.forEach(item => {
 
@@ -392,7 +393,6 @@ document.addEventListener('DOMContentLoaded', () => {
             );
 
             const subtotal = preco * item.qtd;
-
             total += subtotal;
 
             if (y > 270) {
@@ -400,41 +400,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 y = 20;
             }
 
+            // Nome
             doc.setFont("helvetica", "bold");
-            doc.text(`${item.qtd}x ${item.nome} `, 10, y);
+            doc.setFontSize(11);
+
+            // doc.text(`${item.qtd}x ${item.nome}`, 10, y);
 
             doc.text(
-                `R$ ${subtotal.toFixed(2).replace(".", ",")} `,
+                `${item.qtd}x (${item.categoria.toUpperCase()}) ${item.nome}`,
+                10,
+                y
+            );
+            // Valor
+            doc.text(
+                `R$ ${subtotal.toFixed(2).replace(".", ",")}`,
                 190,
                 y,
                 { align: "right" }
             );
 
-            y += 6;
+            y += 7;
 
-            doc.setFont("helvetica", "normal");
-
-            doc.text(`Categoria: ${item.categoria} `, 15, y);
-
-            y += 5;
-
+            // Observação
             if (item.obs && item.obs.trim() !== "") {
 
+                doc.setFont("helvetica", "normal");
                 doc.setFontSize(9);
 
-                doc.text(`Obs: ${item.obs} `, 20, y);
+                doc.text(`Obs: ${item.obs}`, 15, y);
 
-                doc.setFontSize(11);
-
-                y += 5;
+                y += 6;
             }
 
-            y += 4;
-
+            y += 3;
         });
 
-        doc.setDrawColor(180);
+        /* ==========================
+           TOTAL
+        ========================== */
 
+        doc.setDrawColor(180);
         doc.line(10, y, 200, y);
 
         y += 10;
@@ -443,39 +448,42 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.setFontSize(14);
 
         doc.text(
-            `TOTAL: R$ ${total.toFixed(2).replace(".", ",")} `,
+            `TOTAL: R$ ${total.toFixed(2).replace(".", ",")}`,
             190,
             y,
             { align: "right" }
         );
 
+        /* ==========================
+           RODAPÉ
+        ========================== */
+
         y += 15;
 
-        doc.setFontSize(10);
         doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
 
         doc.text(
-            `Pedido gerado em ${new Date().toLocaleString("pt-BR")} `,
+            `Pedido gerado em ${new Date().toLocaleString("pt-BR")}`,
             105,
             y,
             { align: "center" }
         );
 
-        const arquivo =
-            `Pedido_${mesa.replace(/\s+/g, "_")}_${Date.now()}.pdf`;
+        /* ==========================
+           SALVAR
+        ========================== */
+
+        const arquivo = `Pedido_${mesa.replace(/\s+/g, "_")}_${Date.now()}.pdf`;
 
         doc.save(arquivo);
 
         sessionStorage.removeItem("carrinho");
 
         atualizarContador();
-
         renderCarrinho();
-
         fecharModalEndereco();
-
         fecharCarrinho();
-
     };
 
 });
