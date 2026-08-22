@@ -225,9 +225,9 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: auto;
-    padding: 10vw;
+    padding: 30vw 10vw;
     width: 100vw;
     height: 100vh;
 
@@ -237,6 +237,10 @@ header {
         padding: 2vw;
         font-size: 5vw;
         border-radius: 1vw;
+    }
+
+    h1{
+        color: var(--color-bg);
     }
 }
 
@@ -313,7 +317,6 @@ header {
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
-    cursor: pointer;
     background-color: transparent;
     color: var(--color-bg);
     width: 90%;
@@ -328,7 +331,7 @@ header {
 .btn-fechar .btn-x {
     font-size: 30px;
     line-height: 1;
-
+    cursor: pointer;
 }
 
 .menu-categorias {

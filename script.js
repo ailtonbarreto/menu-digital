@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 carregarCategoria(cat);
                 sidebar.classList.remove('open');
+                window.scrollTo({ top: 0, behavior: "smooth" });
 
             });
 
@@ -158,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ` : ''}
 
                 <div class="card-info">
-
 
 
                     <p>${item.descricao || ''}</p>
