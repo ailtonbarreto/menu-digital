@@ -448,7 +448,6 @@ header {
 @media (min-width: 1000px) {
 
     .content {
-        display: wrap;
         align-items: center;
         padding-top: 70px;
     }
