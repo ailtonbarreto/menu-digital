@@ -172,38 +172,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.innerHTML = `
       <div id='finish_container'>
-      
-
+    
           <h3 style='with: 90%; text-align: center; color: #FFF'>Dados do Pedido</h3>
-          
-
-          <div>
-
-            <input id="clienteNome" placeholder="Nome">
-
-          </div>
-
-          <div class='endereco_container'>
-
-              <div>
-
+              <input id="clienteNome" placeholder="Nome">
                 <input id="rua" placeholder="Rua" >
-
-              </div>
-
-              <div class='numero_container'>
-
                 <input id="numero" placeholder="Número">
                 <input id="complemento" placeholder="Complemento">
-
-              </div>
-
-          
-            
             <input id="bairro" placeholder="Bairro">
 
-          </div>
-
+    
         <div class='send_zap_container'>
 
           <button onclick="enviarPedido()" id='send_zap_btn'>Enviar WhatsApp</button>
