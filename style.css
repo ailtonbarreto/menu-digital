@@ -374,12 +374,13 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 10vw;
 }
 
 .card {
     background: var(--color-bg-card);
     padding: 5vw;
-    width: 90vw;
+    width: 85vw;
     margin: 10px;
     border-radius: 10px;
     display: flex;
