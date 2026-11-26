@@ -159,6 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     };
 
+    document.addEventListener('carrinhoAtualizado', () => {
+        if (cartPopup.style.display === 'flex') {
+            renderCarrinho();
+        }
+    });
+
     /* ===========================
        AÇÕES
     =========================== */

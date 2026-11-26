@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         salvarCarrinho(carrinho);
         atualizarContadorCarrinho();
+        document.dispatchEvent(new Event('carrinhoAtualizado'));
     }
 
     btnAbrir.addEventListener('click', () => {
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     preco: item.preco,
                     categoria
                 });
+
 
             });
 

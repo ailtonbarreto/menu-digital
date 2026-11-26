@@ -143,7 +143,6 @@ header {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                width: 100%;
             }
         }
 
@@ -523,7 +522,7 @@ header {
         }
 
         .nome_item {
-            width: 70% !important;
+            width: 100% !important;
         }
 
 
