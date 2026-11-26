@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     id: itemId,
                     nome: item.nome,
                     preco: item.preco,
-                    // imagem: item.imagem || '',
                     categoria
                 });
 

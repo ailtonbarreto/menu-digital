@@ -417,6 +417,7 @@ header {
 .card-info p {
     margin: 10px 0 10px 0;
     font-weight: bold;
+    text-align: center;
     color: var(--primary-color);
 }
 
@@ -430,6 +431,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5vw;
     color: var(--primary-color);
 }
 
